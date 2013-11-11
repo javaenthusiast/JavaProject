@@ -18,6 +18,11 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
 		<servlet-name>fiveFiveFiveServlet</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>fiveFiveFiveServlet</servlet-name>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
 
   <display-name>Servlet 2.5 Web Application</display-name>
 </web-app>
