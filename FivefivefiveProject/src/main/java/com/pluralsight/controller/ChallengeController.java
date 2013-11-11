@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.pluralsight.model.Challenge;
 
-//challenge controller code for challenge.....
+//challenge controller code for challenge.
 @Controller
 @SessionAttributes("challenge")
 public class ChallengeController {
