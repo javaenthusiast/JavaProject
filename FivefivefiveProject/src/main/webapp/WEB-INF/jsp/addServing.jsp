@@ -53,7 +53,8 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 		
 		<tr>
 			<td><spring:message code="task1.text" /></td>
-			<td><form:input path="date"/> </td>
+			<td><form:input path="date" cssClass="error"/> </td>
+			<td><form:errors path="date" cssClass="error"/> </td>
 		</tr>
 		
 		<tr>
@@ -64,7 +65,8 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 		
 		<tr>
 			<td><spring:message code="task3.text" /></td>
-			<td><form:input path="userId"/> </td>
+			<td><form:input path="userId" cssClass="error"/> </td>
+			<td> <form:errors path="userId" cssClass="error"/> </td>
 		</tr>
 		
 		<tr>
@@ -84,6 +86,8 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 </fieldset>
 
 </form:form>
+
+
 
 </body>
 </html>

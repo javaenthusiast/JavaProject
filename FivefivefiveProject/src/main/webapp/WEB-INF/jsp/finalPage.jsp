@@ -13,6 +13,7 @@
 <body>
 
 <h1>Success! Stay tuned for the results!</h1>
+<h1>${servings.items}</h1>
 
 </body>
 </html>
