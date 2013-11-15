@@ -1,10 +1,15 @@
 package com.pluralsight.model;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Range;
@@ -22,10 +27,15 @@ public class Challenge {
 	@Column(name="SERVINGS")
 	private int servings;
 	
-	
+	@OneToMany(mappedBy="challenge", cascade=CascadeType.ALL)
+	private List<Servings> listOfServings = new ArrayList<Servings>();
 
 	public Long getId() {
 		return id;
+	}
+
+	public List<Servings> getListOfServings() {
+		return listOfServings;
 	}
 
 	public int getServings() {
@@ -36,9 +46,14 @@ public class Challenge {
 		this.id = id;
 	}
 
+	public void setListOfServings(List<Servings> listOfServings) {
+		this.listOfServings = listOfServings;
+	}
+
 	public void setServings(int servings) {
 		this.servings = servings;
 	}
+	
 	
 	
 	

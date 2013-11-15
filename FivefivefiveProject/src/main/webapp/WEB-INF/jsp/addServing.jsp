@@ -76,7 +76,7 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 		</tr>
 		
 		<tr>
-			<td colspan="2">
+			<td colspan="3">
 				<input type="submit" value="Submit entries" />
 			</td>
 			

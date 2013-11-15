@@ -19,7 +19,8 @@ public class ServingsServiceImpl implements ServingsService {
 	@Transactional
 	public Servings save(Servings servings) {
 		
-		return servingsRepository.save(servings);
+		servingsRepository.save(servings);
+		return servings;
 	}
 
 }

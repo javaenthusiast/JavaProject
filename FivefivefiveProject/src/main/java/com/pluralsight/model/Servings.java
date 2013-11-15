@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -26,24 +27,16 @@ public class Servings {
 	@Column(name="SERVINGS_ID")
 	private Long id;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	@Size(min = 1, max = 100)
 	@NotEmpty
 	@Column(name="ITEMS")
 	private String items;
-	
+
 	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Column(name="DATE")
 	private Date date;
-	
+
 	@NotNull
 	@Range(min = 1, max = 5)
 	@NumberFormat(style = Style.NUMBER)
@@ -60,44 +53,63 @@ public class Servings {
 	@NotEmpty
 	@Column(name="USERNAME")
 	private String userName;
-
-	public int getUserId() {
-		return userId;
+	
+	@ManyToOne
+	private Challenge challenge;
+	
+	public Challenge getChallenge() {
+		return challenge;
+	}
+	
+	public Date getDate() {
+		return date;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public Long getId() {
+		return id;
 	}
 
 	public String getItems() {
 		return items;
 	}
 
-	public void setItems(String items) {
-		this.items = items;
+	public int getServings() {
+		return servings;
 	}
 
-	public Date getDate() {
-		return date;
+	public int getUserId() {
+		return userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setChallenge(Challenge challenge) {
+		this.challenge = challenge;
 	}
 
 	public void setDate(Date date) {
 		this.date = date;
 	}
 
-	public int getServings() {
-		return servings;
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setItems(String items) {
+		this.items = items;
 	}
 
 	public void setServings(int servings) {
 		this.servings = servings;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 }

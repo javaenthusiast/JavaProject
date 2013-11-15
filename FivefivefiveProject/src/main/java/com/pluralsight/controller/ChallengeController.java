@@ -1,5 +1,7 @@
 package com.pluralsight.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +44,14 @@ public class ChallengeController {
 		else{
 			challengeService.save(challenge);
 		}
-		return "redirect:addServings.html";
+		return "redirect:index.jsp";
 	}
+	
+	
+	/*@RequestMapping(value="getChallenges", method = RequestMethod.GET)
+	public String getChallenges(Model model){
+		List<Challenge> challenges = challengeService.findAllChallenges();
+		model.addAttribute("challenges", challenges);
+		return "getChallenges";
+	}*/
 }
