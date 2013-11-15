@@ -1,14 +1,24 @@
-<html>
-<body>
-<h2>Welcome to 555!</h2>
-
- <a class="btn btn-primary" href="addChallenge.html">
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <body>
+          <h1>
+            Welcome to 555!
+          </h1>
+        
+        <a href="addChallenge.html">
           Add Challenge »
         </a>
         
-        <a class="btn btn-primary" href="addServing.html">
+        <a href="addServing.html">
           Add Servings »
         </a>
-        
-</body>
+      
+    
+
+  </body>
 </html>

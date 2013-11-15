@@ -18,7 +18,7 @@ import com.pluralsight.service.ServingsService;
 
 //Servings controller code//
 @Controller
-@SessionAttributes("servings")
+//@SessionAttributes("servings")
 public class ServingsController {
 
 	@Autowired
@@ -33,9 +33,14 @@ public class ServingsController {
 		return "addServing";
 
 	}
+	
+	/*@RequestMapping(value = "/addServing",  method = RequestMethod.GET)
+	public String getServings(@ModelAttribute ("servings") Servings servings) {
+		return "addServing";
+	}*/
 
 	@RequestMapping(value = "/addServing", method = RequestMethod.POST)
-	public String updateServings(@Valid @ModelAttribute("servings") Servings servings, HttpSession session, BindingResult result) {
+	public String updateServings(@Valid @ModelAttribute("servings") Servings servings, BindingResult result, HttpSession session) {
 
 		System.out.println("servings updated is: " + servings.getServings());
 		if (result.hasErrors()) {

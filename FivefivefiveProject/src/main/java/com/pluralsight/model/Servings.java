@@ -22,6 +22,7 @@ import org.springframework.format.annotation.NumberFormat.Style;
 @Table(name="servings")
 public class Servings {
 	
+
 	@Id
 	@GeneratedValue
 	@Column(name="SERVINGS_ID")
