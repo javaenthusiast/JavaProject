@@ -10,15 +10,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
-
 import com.pluralsight.model.Challenge;
 import com.pluralsight.model.Servings;
 import com.pluralsight.service.ServingsService;
 
 //Servings controller code//
 @Controller
-//@SessionAttributes("servings")
 public class ServingsController {
 
 	@Autowired

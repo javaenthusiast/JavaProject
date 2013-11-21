@@ -22,9 +22,11 @@ public class ChallengeServiceImpl implements ChallengeService {
 		return challengeRepository.save(challenge);
 	}
 
-	/*public List<Challenge> findAllChallenges() {
+	public List<Challenge> findAllChallenges() {
 		return challengeRepository.loadAll();
-	
-	}*/
+		
+	}
+
+
 
 }

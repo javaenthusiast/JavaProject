@@ -24,10 +24,12 @@ public class ChallengeRepositoryImpl implements ChallengeRepository {
 		return challenge;
 	}
 
-	/*public List<Challenge> loadAll() {
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public List<Challenge> loadAll() {
 		Query query = em.createQuery("Select c from Challenge c");
 		List challenges = query.getResultList();
 		return challenges;
-	}*/
+	}
+
 
 }

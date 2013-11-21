@@ -8,6 +8,7 @@ public interface ChallengeRepository {
 	
 	Challenge save(Challenge challenge);
 
-	/*List<Challenge> loadAll();
-*/
+	List<Challenge> loadAll();
+
+	
 }

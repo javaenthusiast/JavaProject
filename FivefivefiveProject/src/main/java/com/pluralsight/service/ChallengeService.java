@@ -8,6 +8,8 @@ public interface ChallengeService {
 	
 	Challenge save(Challenge challenge);
 
-	/*List<Challenge> findAllChallenges();*/
+	List<Challenge> findAllChallenges();
+
+	
 
 }

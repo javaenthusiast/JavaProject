@@ -48,10 +48,10 @@ public class ChallengeController {
 	}
 	
 	
-	/*@RequestMapping(value="getChallenges", method = RequestMethod.GET)
+	@RequestMapping(value="getChallenges", method = RequestMethod.GET)
 	public String getChallenges(Model model){
 		List<Challenge> challenges = challengeService.findAllChallenges();
 		model.addAttribute("challenges", challenges);
 		return "getChallenges";
-	}*/
+	}
 }
