@@ -23,7 +23,7 @@ public class ChallengeServiceImpl implements ChallengeService {
 	}
 
 	public List<Challenge> findAllChallenges() {
-		return challengeRepository.loadAll();
+		return challengeRepository.findAll();
 		
 	}
 

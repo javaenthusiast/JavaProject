@@ -2,6 +2,7 @@ package com.pluralsight.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,17 @@ public class ChallengeController {
 	private ChallengeService challengeService;
 	
 	@RequestMapping(value="addChallenge", method = RequestMethod.GET)
-	public String addChallenge (Model model){
-		Challenge challenge = new Challenge();
-		challenge.setServings(5);
+	public String addChallenge (Model model, HttpSession session){
+		//Challenge challenge = new Challenge();
+		
+		Challenge challenge = (Challenge) session.getAttribute("challenge");//go and look into the session if there is 
+		//a challenge object already stored
+		
+		if(challenge == null){
+			challenge = new Challenge();
+			challenge.setServings(5);
+		}
+		
 		model.addAttribute("challenge", challenge);
 		return "addChallenge";
 		
